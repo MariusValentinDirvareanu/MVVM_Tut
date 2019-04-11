@@ -18,8 +18,31 @@ namespace _1.ViewModels
             {
                 _firstName = value;
                 NotifyOfPropertyChange(() => FirstName);
+                NotifyOfPropertyChange(() => FullName);
             }
         }
+
+        private string _lastName;
+
+        public string LastName
+        {
+            get { return _lastName; }
+            set
+            {
+                _lastName = value;
+                NotifyOfPropertyChange(() => LastName);
+                NotifyOfPropertyChange(() => FullName);
+            }
+        }
+
+        private string fullName;
+
+        public string FullName
+        {
+            get { return $"{ FirstName} { LastName}"; }
+        }
+
+
 
     }
 }
