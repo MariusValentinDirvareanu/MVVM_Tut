@@ -34,7 +34,5 @@
         <TextBox Grid.Row="2" Grid.Column="1" x:Name="FirstName"
                  MinWidth="100"/>
 
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="Test"/>
-
     </Grid>
 </Window>
