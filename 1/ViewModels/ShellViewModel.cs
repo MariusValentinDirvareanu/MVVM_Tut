@@ -10,6 +10,8 @@ namespace _1.ViewModels
     public class ShellViewModel : Screen
     {
         private string _firstName = "Marius";
+        private string _lastName;
+        private string fullName;
 
         public string FirstName
         {
@@ -21,9 +23,7 @@ namespace _1.ViewModels
                 NotifyOfPropertyChange(() => FullName);
             }
         }
-
-        private string _lastName;
-
+        
         public string LastName
         {
             get { return _lastName; }
@@ -34,8 +34,6 @@ namespace _1.ViewModels
                 NotifyOfPropertyChange(() => FullName);
             }
         }
-
-        private string fullName;
 
         public string FullName
         {
