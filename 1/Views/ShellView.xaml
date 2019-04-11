@@ -40,10 +40,10 @@
                  MinWidth="100"/>
 
         <ComboBox Grid.Row="3" Grid.Column="1" x:Name="People" 
-                  SelectedItem="{Binding Path=SelectedPeople, Mode=OneWayToSource}"
+                  SelectedItem="{Binding Path=SelectedPerson, Mode=OneWayToSource}"
                   DisplayMemberPath="FirstName"/>
         <!--Nu merge-->
-        <TextBlock Grid.Row="3" Grid.Column="2" x:Name="SelectedPerson_FirstName"/>
+        <TextBlock Grid.Row="3" Grid.Column="2" x:Name="SelectedPerson_LastName"/>
 
     </Grid>
 </Window>
