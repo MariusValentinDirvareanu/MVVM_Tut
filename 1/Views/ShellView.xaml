@@ -39,5 +39,11 @@
         <TextBox Grid.Row="2" Grid.Column="2" x:Name="LastName"
                  MinWidth="100"/>
 
+        <ComboBox Grid.Row="3" Grid.Column="1" x:Name="People" 
+                  SelectedItem="{Binding Path=SelectedPeople, Mode=OneWayToSource}"
+                  DisplayMemberPath="FirstName"/>
+        <!--Nu merge-->
+        <TextBlock Grid.Row="3" Grid.Column="2" x:Name="SelectedPerson_FirstName"/>
+
     </Grid>
 </Window>

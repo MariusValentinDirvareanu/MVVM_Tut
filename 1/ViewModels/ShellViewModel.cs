@@ -1,4 +1,5 @@
-﻿using Caliburn.Micro;
+﻿using _1.Models;
+using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,15 @@ namespace _1.ViewModels
         private string _firstName = "Marius";
         private string _lastName;
         private string fullName;
+        private BindableCollection<PersonModel> _people = new BindableCollection<PersonModel>();
+        private PersonModel _selectedPerson;
+
+        public ShellViewModel()
+        {
+            People.Add(new PersonModel { FirstName = "Marius", LastName = "Dirvareanu" });
+            People.Add(new PersonModel { FirstName = "Ionela", LastName = "Dirvareanu" });
+            People.Add(new PersonModel { FirstName = "Alexandru", LastName = "Dirvareanu" });
+        }
 
         public string FirstName
         {
@@ -40,7 +50,20 @@ namespace _1.ViewModels
             get { return $"{ FirstName} { LastName}"; }
         }
 
+        public BindableCollection<PersonModel> People
+        {
+            get { return _people; }
+            set { _people = value; }
+        }
 
+        public PersonModel SelectedPerson
+        {
+            get { return _selectedPerson; }
+            set {
+                _selectedPerson = value;
+                NotifyOfPropertyChange(() => SelectedPerson);
+            }
+        }
 
     }
 }
