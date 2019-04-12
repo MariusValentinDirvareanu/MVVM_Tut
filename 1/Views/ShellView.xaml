@@ -46,6 +46,15 @@
         <TextBlock Grid.Row="3" Grid.Column="2" x:Name="SelectedPerson_LastName"/>
 
         <Button Grid.Row="4" Grid.Column="1" x:Name="ClearText">Clear Text</Button>
+
+        <Button x:Name="LoadPageOne" Grid.Row="4" Grid.Column="1">Load First Page</Button>
+
+        <Button x:Name="LoadPageTwo" Grid.Row="4" Grid.Column="2">Load Second Page</Button>
         
+        <ContentControl Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5"
+                        x:Name="ActiveItem"/>
+        
+        
+
     </Grid>
 </Window>
